@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --header-bg: rgb(255, 244, 231);
-  --section-title: 2.9rem; /*40px*/
+  --section-title: 2.9rem;
   --header-banner-title: 3.438rem;
   --section-weight: 700;
   --btn-color: rgb(255, 144, 14);
@@ -20,12 +20,12 @@
   color: var(--dark1);
 }
 
+/* gloval uses  */
 .container {
   width: 100%;
   max-width: var(--container-width);
   margin: 0 auto;
 }
-
 .btn {
   border-radius: 8px;
   background: rgb(255, 144, 14);
@@ -39,28 +39,30 @@
   outline: none;
   cursor: pointer;
 }
+.section-title {
+  font-size: var(--header-banner-title);
+  font-weight: var(--section-weight);
+  cursor: pointer;
+}
 
+/*Header Style Start  */
 header {
   background-color: var(--header-bg);
   padding: 20px 7%;
+  width: 100%;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.nav-title {
-  font-size: var(--section-title);
+h2.nav-title {
+  font-size: 2.5rem;
   font-weight: var(--section-weight);
-  cursor: pointer;
 }
-
 .mobile-menu {
   display: none;
 }
-
 .mobile-menu i {
   font-size: 2rem;
   cursor: pointer;
@@ -80,13 +82,13 @@ nav .nav-list .nav-link a {
   cursor: pointer;
   color: var(--dark1);
 }
-
 .banner {
   text-align: center;
   padding: 100px 0 70px;
 }
 .banner h2 {
   font-size: var(--header-banner-title);
+  font-weight: 800;
 }
 .banner p {
   font-size: var(--p-font);
@@ -95,7 +97,7 @@ nav .nav-list .nav-link a {
   max-width: 900px;
   margin: 15px auto 20px;
 }
-.bannder-btn {
+.banner-btn {
   width: 180px;
   height: 64px;
   margin: 0 auto;
@@ -111,6 +113,7 @@ nav .nav-list .nav-link a {
   object-fit: cover;
 }
 
+/* Future Style Start */
 .feature {
   margin: 4rem auto;
   padding: 0 7%;
@@ -134,9 +137,8 @@ nav .nav-list .nav-link a {
 .feature-teams .team-content {
   flex: 1;
 }
-.team-content h2 {
-  font-size: var(--section-title);
-  font-weight: var(--section-weight);
+.team-content h2 span {
+  color: var(--btn-color);
 }
 .team-content p {
   margin: 20px 0;
@@ -145,54 +147,69 @@ nav .nav-list .nav-link a {
   margin-left: 0;
 }
 
-/* enjoy  */
-.enjoy {
+/* Experience Style Start  */
+.experience {
   padding: 2rem 7%;
 }
-.enjoy-content {
+.experience-content {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
-.enjoy-left {
-  flex: 1;
+
+.experience-left {
+  flex: 1.5;
 }
-.enjoy-left h2.enjoy-title {
-  font-size: var(--section-title);
-  font-weight: var(--section-weight);
-  padding: 0 6rem 0 10px;
+
+.experience-left h2 {
+  padding: 0 0 0 10px;
   border-left: 4px solid var(--btn-color);
 }
-.enjoy-left p.enjoy-paragraph {
+
+.experience-left p.experience-paragraph {
   font-size: var(--p-font);
   color: #727272;
   margin-top: 10px;
 }
-.enjoy-col {
-  margin: 8px 0 0 0;
+
+.experience-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.experience-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 8px 0;
   border-radius: 8px;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
   background: rgb(255, 255, 255);
   padding: 10px 24px;
 }
-.enjoy-col h2 {
+
+.experience-column h3 {
   font-size: 17px;
   font-weight: 800;
 }
-.enjoy-col p {
+
+.experience-column p {
   font-size: 16px;
   margin-top: 5px;
 }
-.enjoy-right {
+
+.experience-right {
   flex: 1;
   position: relative;
 }
-.enjoy-right img {
+
+.experience-right img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-.enjoy-card {
+
+.experience-card {
   position: absolute;
   bottom: -30px;
   left: -30px;
@@ -207,12 +224,13 @@ nav .nav-list .nav-link a {
   flex-direction: column;
 }
 
-.enjoy-card h4 {
-  font-size: 2.6rem;
+.experience-card h4 {
+  font-size: 2.2rem;
   font-weight: 700;
   color: white;
 }
-.enjoy-card span {
+
+.experience-card span {
   display: block;
   font-size: 1rem;
   color: white;
@@ -223,14 +241,9 @@ nav .nav-list .nav-link a {
 .project-award {
   padding: 3rem 7%;
 }
-.project-title {
-  font-size: var(--section-title);
-  font-weight: var(--section-weight);
-}
-.project-awadr-onctent p {
+.project-award-content p {
   font-size: var(--p-font);
-  max-width: 550px;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .project-cards {
   display: grid;
@@ -261,44 +274,53 @@ nav .nav-list .nav-link a {
   font-size: 15px;
 }
 
-/* sponser  */
-.spnoser {
+/* Sponser Section Style */
+.sponsor {
   padding: 0 7%;
   margin-top: 3rem;
   text-align: center;
 }
-.sponser-contnet h2 {
-  font-size: var(--section-title);
-  font-weight: var(--section-weight);
-}
-.sponser-contnet p {
+
+.sponsor-content p {
   font-size: var(--p-font);
-  margin-top: 10px;
+  margin: 8px auto 0;
   max-width: 600px;
   width: 100%;
-  margin: auto;
-  line-height: 20px;
 }
-.sponser-company-list {
+
+.sponsor-company-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  gap: 20px;
+  margin-top: 40px;
 }
-.sponser-company-list img {
+
+.sponsor-company-list img {
   width: 100px;
   height: auto;
 }
+
 footer p {
   background-color: #fff4e7;
   padding: 20px;
   text-align: center;
   color: #727272;
   width: 100%;
+  font-weight: 500;
   margin: 80px 0 40px;
 }
-/* 800px  */
+
+/* Responsive design for screen sizes 800px and below */
 @media only screen and (max-width: 800px) {
+  :root {
+    --section-title: 2.5rem;
+    --header-banner-title: 3.2rem;
+  }
+  h2.nav-title {
+    font-size: 2rem;
+  }
   nav .nav-list {
     display: none;
   }
@@ -310,37 +332,42 @@ footer p {
     flex-direction: column-reverse;
     gap: 4rem;
   }
-  .enjoy-content {
+  .experience-content {
     flex-direction: column;
   }
-  .enjoy-col {
-    margin: 18px 0 0 0;
-    padding: 18px 24px;
+
+  .experience-column h3 {
+    font-size: 18px;
+    font-weight: 700;
   }
-  .enjoy-col h2 {
-    font-size: 20px;
-  }
-  .enjoy-left p.enjoy-paragraph {
+  .experience-left p.experience-paragraph {
     margin-top: 15px;
   }
   .project-cards {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
   }
-  :root {
-    --section-title: 2.4rem;
-    --header-banner-title: 3.2rem;
-    /* --container-width: 1240px; */
+  .experience-card {
+    left: 0;
+    bottom: 0;
+  }
+  .sponsor-company-list {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
-/* 600px */
+/* Responsive design for screen sizes 600px and below */
 @media only screen and (max-width: 600px) {
   :root {
     --section-title: 1.9rem;
     --header-banner-title: 2.3rem;
   }
-  .bannder-btn {
+  .team-content p {
+    margin: 10px 0 0;
+    text-align: justify;
+  }
+  .banner-btn {
     width: 180px;
     height: 54px;
     margin: 0 auto;
@@ -378,7 +405,7 @@ footer p {
   .sponser-contnet h2 {
     margin-bottom: 5px;
   }
-  .enjoy-card {
+  .experience-card {
     left: 0;
     bottom: 0;
   }
@@ -386,17 +413,32 @@ footer p {
 /* 600px */
 @media only screen and (max-width: 400px) {
   :root {
-    --section-title: 1.9rem;
-    --header-banner-title: 2.3rem;
+    --section-title: 2.4rem;
+    --header-banner-title: 2.2rem;
   }
- 
-  .project-cards{
+  .btn {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  header {
+    padding: 15px 4%;
+  }
+  h2.nav-title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .feature-btn {
+    margin-top: 20px;
+  }
+  .project-cards {
     padding: 0;
+  }
+  .banner {
+    padding: 60px 0px;
   }
   .project-card {
     width: 100%;
     height: 200px;
     text-align: center;
   }
-
 }
